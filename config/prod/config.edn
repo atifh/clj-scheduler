@@ -1,0 +1,8 @@
+{:environment (System/getenv "environment")
+ :database-adapter (System/getenv "database_adapter")
+ :database-username (System/getenv "database_username")
+ :database-password (System/getenv "database_password")
+ :database-name (System/getenv "database_name")
+ :database-host (System/getenv "database_host")
+ :database-port (System/getenv "database_port")
+}

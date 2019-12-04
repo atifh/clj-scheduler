@@ -1,0 +1,7 @@
+{:database-adapter "postgresql"
+ :database-username ""
+ :database-password ""
+ :database-name ""
+ :database-host "localhost"
+ :database-port 5432
+ }
