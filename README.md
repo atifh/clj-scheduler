@@ -4,7 +4,7 @@ This project demonstrate an integration with Quartz Scheduler to run periodic jo
 
 ## Installation
 
-### Setting up DB
+### Setting up DB for persistent store
 
 You need to install postgres
 
@@ -18,6 +18,8 @@ Once the postgres is installed & is running successfully, you need to create a d
 ```
 $ createdb quartz_scheduler
 ```
+
+https://github.com/quartz-scheduler/quartz/tree/master/quartz-core/src/main/resources/org/quartz/impl/jdbcjobstore
 
 ### Install application dependencies
 

@@ -5,6 +5,8 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [yogthos/config "1.1.7"]
+                 [org.clojure/tools.logging "0.5.0"]
+                 [ch.qos.logback/logback-classic "1.1.1"]
                  [clojurewerkz/quartzite "2.1.0"]]
   :main ^:skip-aot clj-scheduler.core
   :target-path "target/%s"
