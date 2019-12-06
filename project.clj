@@ -7,7 +7,9 @@
                  [yogthos/config "1.1.7"]
                  [org.clojure/tools.logging "0.5.0"]
                  [ch.qos.logback/logback-classic "1.1.1"]
-                 [clojurewerkz/quartzite "2.1.0"]]
+                 [clojurewerkz/quartzite "2.1.0"]
+                 [org.clojure/java.jdbc "0.7.9"]
+                 [org.postgresql/postgresql "42.2.4"]]
   :main ^:skip-aot clj-scheduler.core
   :target-path "target/%s"
   :profiles {:dev {:resource-paths ["config/dev" "templates/"
