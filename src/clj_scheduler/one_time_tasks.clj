@@ -1,6 +1,5 @@
 (ns clj-scheduler.one-time-tasks
   (:require
-   [clj-time.core :as time]
    [clj-scheduler.log :as log]
    [clojurewerkz.quartzite.scheduler :as qs]
    [clojurewerkz.quartzite.triggers :as t]
