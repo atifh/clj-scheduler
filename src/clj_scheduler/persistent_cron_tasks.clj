@@ -28,6 +28,7 @@
                      (t/with-identity (t/key "triggers.jobs.runs-persistent-cron.1"))
                      (t/start-now)
                      (t/with-schedule (schedule
+                                       ; At 15:00:00pm, on every Thursday, every month
                                        (cron-schedule "0 0 15 ? * 5"))))]
         [job trigger]))
     (log/info "jobs.runs-persistent-cron.1 already scheduled")))

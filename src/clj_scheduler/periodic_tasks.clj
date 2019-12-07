@@ -6,7 +6,8 @@
    [clojurewerkz.quartzite.jobs :as j]
    [clojurewerkz.quartzite.schedule.simple :refer [schedule
                                                    with-repeat-count
-                                                   with-interval-in-minutes]]))
+                                                   with-interval-in-minutes
+                                                   with-interval-in-milliseconds]]))
 
 (j/defjob periodic-job
   [ctx]
@@ -28,7 +29,7 @@
                  (t/start-now)
                  (t/with-schedule (schedule
                                    (with-repeat-count 5)
-                                   (with-interval-in-minutes 1))))]
+                                   (with-interval-in-milliseconds 1000))))]
     [job trigger]))
 
 

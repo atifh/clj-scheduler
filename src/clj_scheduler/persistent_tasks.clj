@@ -7,7 +7,7 @@
    [clojurewerkz.quartzite.jobs :as j]
    [clojurewerkz.quartzite.schedule.simple :refer [schedule
                                                    repeat-forever
-                                                   with-interval-in-minutes]]))
+                                                   with-interval-in-days]]))
 
 (j/defjob persistent-job
   [ctx]
@@ -30,7 +30,7 @@
                      (t/start-now)
                      (t/with-schedule (schedule
                                        ;; runs every 30 mins
-                                       (with-interval-in-minutes 30)
+                                       (with-interval-in-days 1)
                                        (repeat-forever))))]
         [job trigger]))
     (log/info "jobs.runs-persistent.1 already scheduled")))
