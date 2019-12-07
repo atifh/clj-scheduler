@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+  <h3>Quartz Schedulers</h3>
+<table id="customers">
+  <tr>
+    <th>job_name</th>
+    <th>start_time</th>
+    <th>prev_fire_time</th>
+    <th>next_fire_time</th>
+    <th>trigger_type</th>
+  </tr>
+  {% for job in jobs %}
+  <tr>
+    <td>{{job.job_name}}</td>
+    <td>{{job.start_time_p}}</td>
+    <td>{{job.prev_fire_time_p}}</td>
+    <td>{{job.next_fire_time_p}}</td>
+    <td>{{job.trigger_type}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
