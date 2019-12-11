@@ -1,8 +1,9 @@
 {:environment "dev"
  :database-adapter "postgresql"
  :database-username ""
+ :database-url "jdbc:postgresql://localhost:5432/quartz_scheduler_demo"
+ :database-name "quartz_scheduler_demo"
  :database-password ""
- :database-name ""
  :database-host "localhost"
  :database-port 5432
  }
