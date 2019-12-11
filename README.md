@@ -13,12 +13,12 @@ On MAC OS:
 $ brew install postgres
 ```
 
-Once the postgres is installed & is running successfully, you need to [setup_db.sh](https://github.com/atifh/clj-scheduler/blob/master/setup_db.sh) script which will created a database named `quartz_scheduler_demo` and dump the Quartz [PostgreSQL schema](https://github.com/atifh/clj-scheduler/blob/master/resources/quartz_tables_postgres.sql): 
+Once the postgres is installed & is running successfully, you need to run [setup_db.sh](https://github.com/atifh/clj-scheduler/blob/master/setup_db.sh) script which will create a database named `quartz_scheduler_demo` and dump the Quartz [PostgreSQL schema](https://github.com/atifh/clj-scheduler/blob/master/resources/quartz_tables_postgres.sql): 
 
 ```
 ./setup_db.sh
 ```
-You can also find schemas for the all database [here](https://github.com/quartz-scheduler/quartz/tree/master/quartz-core/src/main/resources/org/quartz/impl/jdbcjobstore).
+FYI: You can also find schemas of all databases [here](https://github.com/quartz-scheduler/quartz/tree/master/quartz-core/src/main/resources/org/quartz/impl/jdbcjobstore).
 
 ### Install application dependencies
 
@@ -43,7 +43,8 @@ We're using logging in this project to log information. Please make sure to add 
 
 Here is the [code](https://github.com/atifh/clj-scheduler/blob/master/src/clj_scheduler/one_time_tasks.clj)
 
-Fire REPL and run
+Fire REPL and run this:
+
 `clj-scheduler.one-time-tasks> (schedule-job)`
 
 The successful output would look like this:
@@ -93,7 +94,7 @@ You can view all the scheduled jobs in a web view by running the ring server:
 
 `lein run server`
 
-Now visit http://localhost:8080/ and you will see the below which renders all the scheduled jobs:
+Now visit http://localhost:8080/ and you will see the below page which renders all the scheduled jobs:
 
 ![All scheduled jobs](https://raw.githubusercontent.com/atifh/clj-scheduler/master/list-scheduled-jobs.png)
 
