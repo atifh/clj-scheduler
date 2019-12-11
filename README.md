@@ -39,7 +39,7 @@ We're using logging in this project to log information. Please make sure to add 
 
 #### One time job:
 
-[Temporary hack - will fix this] In order to run one time job, please make sure to mv [resources/quartz.properties](https://github.com/atifh/clj-scheduler/blob/master/resources/quartz.properties) out this project repo.
+[Temporary hack - will fix this] In order to run one time job, please make sure to mv [resources/quartz.properties](https://github.com/atifh/clj-scheduler/blob/master/resources/quartz.properties) out of this project repo.
 
 Here is the [code](https://github.com/atifh/clj-scheduler/blob/master/src/clj_scheduler/one_time_tasks.clj)
 
@@ -90,6 +90,7 @@ This triggers a job every thursday of every month at 3 PM. Here is the [code](ht
 You can view all the scheduled jobs in a web view by running the ring server:
 
 `cd clj_scheduler`
+
 `lein run server`
 
 Now visit http://localhost:8080/ and you will see the below which renders all the scheduled jobs:
